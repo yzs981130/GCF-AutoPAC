@@ -22,11 +22,11 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 		ip = para[7:]
 		fmt.Println("SOCKS5: " + ip)
 		proxy = "SOCKS5 " + ip
-	} else if para[0:5] == "HTTP" {
+	} else if para[0:4] == "HTTP" {
 		ip = para[6:]
 		fmt.Println("HTTP: " + ip)
 		proxy = "HTTP " + ip
-	} else if para[0:6] == "HTTPS" {
+	} else if para[0:5] == "HTTPS" {
 		ip = para[7:]
 		fmt.Println("HTTPS: " + ip)
 		proxy = "HTTPS " + ip
