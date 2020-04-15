@@ -25,11 +25,11 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 	} else if para[0:4] == "HTTP" {
 		ip = para[5:]
 		fmt.Println("HTTP: " + ip)
-		proxy = "HTTP " + ip
+		proxy = "PROXY " + ip
 	} else if para[0:5] == "HTTPS" {
 		ip = para[6:]
 		fmt.Println("HTTPS: " + ip)
-		proxy = "HTTPS " + ip
+		proxy = "PROXY " + ip
 	} else {
 		fmt.Println("Unsupported scheme")
 	}
